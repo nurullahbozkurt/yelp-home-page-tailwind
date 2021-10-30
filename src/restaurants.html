@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/tailwind.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="header" class="bg-white sticky top-0 z-10">
+      <div class="flex flex-col items-center w-full sm:px-10 mx-5 pt-6">
+        <div class="header-top w-full grid grid-cols-10 items-center">
+          <div class="logo col-span-2">
+            <img class="w-[80px] h-[40px]" src="/img/yelp-logo.svg" alt="" />
+            <button onClick="sidebar()" class="toggle block sm:hidden">
+              <img src="/img/list_black_24dp.svg" alt="" />
+            </button>
+          </div>
+          <div class="search lg:col-span-5 col-span-6">
+            <form
+              class="input flex border-opacity-25 w-full shadow-custom rounded"
+            >
+              <input
+                class="sm:p-3 p-1 w-full rounded-l"
+                type="text"
+                placeholder="tacos,cheap,dinner,Max's"
+              />
+              <input
+                class="sm:p-3 p-1 w-full"
+                type="text"
+                placeholder="İstanbul,Turkey"
+              />
+              <button
+                class="
+                  bg-red-500 bg-red-600
+                  rounded-r
+                  w-1/6
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+                <img class="mx-2" src="/img/search_white_36dp.svg" alt="" />
+              </button>
+            </form>
+          </div>
+          <div
+            class="link hidden lg:flex lg:justify-end lg:col-span-2 lg:block"
+          >
+            <div
+              class="hover:bg-gray-100 rounded flex items-center justify-center"
+            >
+              <a class="px-3 font-medium text-xs font-openSans" href="/"
+                >For Businesses</a
+              >
+            </div>
+            <div
+              class="hover:bg-gray-100 rounded flex items-center justify-center"
+            >
+              <a class="px-3 font-medium text-xs font-openSans" href="/"
+                >Write a Review</a
+              >
+            </div>
+          </div>
+          <div class="icons grid grid-cols-3 lg:col-span-1 col-span-2">
+            <button
+              class="
+                h-8
+                hover:bg-gray-100
+                rounded
+                mx-1
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <img src="/img/textsms_black_24dp.svg" alt="" />
+            </button>
+            <button
+              class="
+                h-8
+                hover:bg-gray-100
+                rounded
+                mx-1
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <img src="/img/notifications_black_24dp.svg" alt="" />
+            </button>
+            <button
+              class="
+                h-8
+                hover:bg-gray-100
+                rounded
+                mx-1
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <img src="/img/account_circle_black_24dp.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="header-bottom w-full mt-5 border-b">
+          <div class="menu grid grid-cols-11">
+            <div></div>
+            <div></div>
+
+            <div class="hidden sm:col-span-8 sm:block">
+              <nav class="flex">
+                <div class="nav flex">
+                  <div
+                    class="
+                      nav-card
+                      mx-6
+                      pb-5
+                      items-end
+                      mt-5
+                      group
+                      relative
+                      hover:border-b-2 hover:border-red-600
+                    "
+                  >
+                    <a class="text-sm text-gray-800 flex items-end" href="#"
+                      >Restaurants
+                      <img class="icon-15px" src="/img/dropdown.svg" alt="" />
+                    </a>
+                    <div
+                      class="
+                        nav-card-content
+                        grid grid-cols-2
+                        bg-gray-200
+                        rounded
+                        p-3
+                        hidden
+                        absolute
+                        group-hover:block
+                        mt-6
+                      "
+                    >
+                      <a class="text-xs" href="/">Delivery</a>
+                      <a class="text-xs" href="">Reservations</a>
+                      <a class="text-xs" href="">Burgers</a>
+                    </div>
+                  </div>
+                  <div
+                    class="
+                      nav-card
+                      hover:border-b-2 hover:border-red-600
+                      mx-6
+                      pb-5
+                      items-end
+                      mt-5
+                      group
+                      relative
+                    "
+                  >
+                    <a class="text-sm text-gray-800 flex flex-shrink-0" href="#"
+                      >HomeServices
+                      <img class="icon-15px" src="/img/dropdown.svg" alt="" />
+                    </a>
+                    <div
+                      class="
+                        nav-card-content
+                        grid grid-cols-2
+                        bg-gray-200
+                        rounded
+                        p-3
+                        hidden
+                        absolute
+                        group-hover:block
+                        mt-6
+                      "
+                    >
+                      <a class="text-xs" href="/">Delivery</a>
+                      <a class="text-xs" href="">Reservations</a>
+                      <a class="text-xs" href="">Burgers</a>
+                    </div>
+                  </div>
+                  <div
+                    class="
+                      nav-card
+                      hover:border-b-2 hover:border-red-600
+                      mx-6
+                      pb-5
+                      items-end
+                      mt-5
+                      group
+                      relative
+                    "
+                  >
+                    <a class="text-sm text-gray-800 flex" href="#"
+                      >AutoServices
+                      <img class="icon-15px" src="/img/dropdown.svg" alt="" />
+                    </a>
+                    <div
+                      class="
+                        nav-card-content
+                        grid grid-cols-2
+                        bg-gray-200
+                        rounded
+                        p-3
+                        hidden
+                        absolute
+                        group-hover:block
+                        mt-6
+                      "
+                    >
+                      <a class="text-xs" href="/">Delivery</a>
+                      <a class="text-xs" href="">Reservations</a>
+                      <a class="text-xs" href="">Burgers</a>
+                    </div>
+                  </div>
+                  <div
+                    class="
+                      nav-card
+                      hover:border-b-2 hover:border-red-600
+                      mx-6
+                      pb-5
+                      items-end
+                      mt-5
+                      group
+                      relative
+                    "
+                  >
+                    <a class="text-sm text-gray-800 flex" href="#"
+                      >More..
+                      <img class="icon-15px" src="/img/dropdown.svg" alt="" />
+                    </a>
+                    <div
+                      class="
+                        nav-card-content
+                        grid grid-cols-2
+                        bg-gray-200
+                        rounded
+                        p-3
+                        hidden
+                        absolute
+                        group-hover:block
+                        mt-6
+                      "
+                    >
+                      <a class="text-xs" href="/">Delivery</a>
+                      <a class="text-xs" href="">Reservations</a>
+                      <a class="text-xs" href="">Burgers</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main ">
+      <div id="container" class="grid grid-cols-4">
+        <div
+          id="left-content"
+          class="lg:col-span-3 col-span-4 grid grid-cols-4 px-2 sm:px-10"
+        >
+          <aside class="sidebar">
+            <!--EN SOL-->
+            <div class="filters border-b">
+              <span class="font-semibold">Filters</span>
+              <div
+                class="
+                  sm:w-auto
+                  w-2/4
+                  filtered
+                  flex-shrink-0 flex
+                  justify-center
+                  border
+                  my-5
+                  rounded-2xl
+                "
+              >
+                <div
+                  class="
+                    border-r
+                    flex-shrink-0 flex
+                    items-center
+                    justify-center
+                    px-2
+                  "
+                >
+                  <a class="text-xs py-1 font-semibold" href="">₺</a>
+                </div>
+                <div
+                  class="
+                    border-r
+                    flex-shrink-0 flex
+                    items-center
+                    justify-center
+                    px-2
+                  "
+                >
+                  <a class="text-xs py-1 font-semibold" href="">₺₺</a>
+                </div>
+                <div
+                  class="
+                    border-r
+                    flex-shrink-0 flex
+                    items-center
+                    justify-center
+                    px-2
+                  "
+                >
+                  <a class="text-xs py-1 font-semibold" href="">₺₺₺</a>
+                </div>
+                <div
+                  class="px-2 flex-shrink-0 flex items-center justify-center"
+                >
+                  <a class="text-xs py-1 font-semibold" href="">₺₺₺₺</a>
+                </div>
+              </div>
+            </div>
+            <div class="suggested pb-3 border-b">
+              <p class="my-3 text-sm font-semibold">Suggested</p>
+              <div class="link-group">
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="checkbox" />
+                  <a class="text-xs" href="">Open Now</a>
+                </nav>
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="checkbox" />
+                  <a class="text-xs" href="">Good for Dinner</a>
+                </nav>
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="checkbox" />
+                  <a class="text-xs" href="">Good for Groups</a>
+                </nav>
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="checkbox" />
+                  <a class="text-xs" href="">Full Bar</a>
+                </nav>
+              </div>
+            </div>
+            <div class="features pb-3 border-b">
+              <p class="my-3 text-sm font-semibold">Features</p>
+              <div class="link-group">
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="checkbox" />
+                  <a class="text-xs" href="">Good for Kids</a>
+                </nav>
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="checkbox" />
+                  <a class="text-xs" href="">Takes Reservations</a>
+                </nav>
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="checkbox" />
+                  <a class="text-xs" href="">Has TV</a>
+                </nav>
+                <a class="text-green-800 font-semibold text-xs" href=""
+                  >See All..</a
+                >
+              </div>
+            </div>
+            <div class="distance">
+              <p class="my-3 text-sm font-semibold">Bird's-eye View</p>
+              <div class="link-group">
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="radio" />
+                  <a class="text-xs" href="">Driving (8 km.)</a>
+                </nav>
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="radio" />
+                  <a class="text-xs" href="">Biking (4 km.)</a>
+                </nav>
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="radio" />
+                  <a class="text-xs" href="">Walking (2 km.)</a>
+                </nav>
+                <nav class="flex items-center pt-1">
+                  <input class="w-4 h-4 mr-2" type="radio" />
+                  <a class="text-xs" href="">Within 4 blocks</a>
+                </nav>
+              </div>
+            </div>
+          </aside>
+          <div class="sm:col-span-3 col-span-4 w-full mt-10">
+            <div class="flex">
+              <a class="text-gray-600 font-semibold text-xs" href=""
+                >Istanbul</a
+              >
+              <span class="text-gray-400 text-xs font-bold mx-5">></span>
+              <a class="text-gray-600 font-semibold text-xs" href=""
+                >Restaurant</a
+              >
+            </div>
+            <div class="flex justify-between">
+              <h1 class="font-bold text-xl">Restaurants in Istanbul, Turkey</h1>
+              <div class="flex items-end justify-center">
+                <p class="text-xs">Sort:</p>
+                <a class="font-bold text-xs flex" href=""> Recommended </a>
+                <img class="icon-15px" src="/img/dropdown.svg" alt="" />
+              </div>
+            </div>
+            <div class="icon-block flex mt-14 mb-10">
+              <div
+                class="
+                  icon
+                  border
+                  flex
+                  items-center
+                  border-gray-400
+                  rounded
+                  mr-4
+                "
+              >
+                <p class="px-4 text-sm">Delivery</p>
+                <img src="/img/delivery_70x56_v2.svg" alt="" />
+              </div>
+              <div
+                class="icon border flex items-center border-gray-400 rounded"
+              >
+                <p class="px-4 text-sm">Delivery</p>
+                <img src="/img/takeout_70x56_v2.svg" alt="" />
+              </div>
+            </div>
+            <div class="card border rounded flex sm:p-5 my-5">
+              <div class="card-img">
+                <img
+                  class="card-content-img flex-1 rounded sm:mr-5 mr-1 flex-1"
+                  src="/img/restaurant.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="card-content flex-1 flex flex-col">
+                <span class="text-sm font-bold"
+                  >1.
+                  <a class="text-sm font-bold" href="/"
+                    >Old Ottoman Cafe & Restaurant</a
+                  >
+                </span>
+                <div class="star flex">
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-300
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-500
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-700
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-900
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <span
+                    class="
+                      text-xs text-gray-500
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    153</span
+                  >
+                </div>
+                <div class="buttons">
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Cafes</a
+                    >
+                  </button>
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Kebab</a
+                    >
+                  </button>
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Ottoman Cuisine</a
+                    >
+                  </button>
+                </div>
+                <div class="comments flex items-start py-2 border-b">
+                  <img src="/img/mark_chat_unread_black_18dp.svg" alt="" />
+                  <p class="text-xs text-gray-700">
+                    “Ottoman cafe Istanbul. Teal buildings of yesteryear A pide
+                    and burak shop..
+                  </p>
+                </div>
+                <div class="flex py-5">
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/check_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Outdoor dining</p>
+                  </div>
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/close_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Delivery</p>
+                  </div>
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/check_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Takeout</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border rounded flex sm:p-5 my-5">
+              <div class="card-img">
+                <img
+                  class="card-content-img flex-1 rounded sm:mr-5 mr-1"
+                  src="/img/restaurant.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="card-content flex-1 flex flex-col">
+                <span class="text-sm font-bold"
+                  >1.
+                  <a class="text-sm font-bold" href="/"
+                    >Old Ottoman Cafe & Restaurant</a
+                  >
+                </span>
+                <div class="star flex">
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-300
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-500
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-700
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-900
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <span
+                    class="
+                      text-xs text-gray-500
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    153</span
+                  >
+                </div>
+                <div class="buttons">
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Cafes</a
+                    >
+                  </button>
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Kebab</a
+                    >
+                  </button>
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Ottoman Cuisine</a
+                    >
+                  </button>
+                </div>
+                <div class="comments flex items-start py-2 border-b">
+                  <img src="/img/mark_chat_unread_black_18dp.svg" alt="" />
+                  <p class="text-xs text-gray-700">
+                    “Ottoman cafe Istanbul. Teal buildings of yesteryear A pide
+                    and burak shop..
+                  </p>
+                </div>
+                <div class="flex py-5">
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/check_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Outdoor dining</p>
+                  </div>
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/close_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Delivery</p>
+                  </div>
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/check_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Takeout</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border rounded flex sm:p-5 my-5">
+              <div class="card-img">
+                <img
+                  class="card-content-img flex-1 rounded sm:mr-5 mr-1"
+                  src="/img/restaurant.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="card-content flex-1 flex flex-col">
+                <span class="text-sm font-bold"
+                  >1.
+                  <a class="text-sm font-bold" href="/"
+                    >Old Ottoman Cafe & Restaurant</a
+                  >
+                </span>
+                <div class="star flex">
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-300
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-500
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-700
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <img
+                    class="
+                      icon-20px
+                      hover:bg-yellow-900
+                      bg-gray-300
+                      rounded
+                      m-0.5
+                    "
+                    src="/img/son-starr.svg"
+                    alt=""
+                  />
+                  <span
+                    class="
+                      text-xs text-gray-500
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    153</span
+                  >
+                </div>
+                <div class="buttons">
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Cafes</a
+                    >
+                  </button>
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Kebab</a
+                    >
+                  </button>
+                  <button>
+                    <a
+                      class="
+                        text-xs
+                        px-0.5
+                        rounded
+                        bg-gray-200
+                        font-semibold
+                        text-gray-600
+                        hover:bg-gray-300
+                      "
+                      href="/"
+                      >Ottoman Cuisine</a
+                    >
+                  </button>
+                </div>
+                <div
+                  style="height: fit-content"
+                  class="comments flex items-start py-2 border-b"
+                >
+                  <img src="/img/mark_chat_unread_black_18dp.svg" alt="" />
+                  <p class="text-xs text-gray-700">
+                    “Ottoman cafe Istanbul. Teal buildings of yesteryear A pide
+                    and burak shop..
+                  </p>
+                </div>
+                <div class="flex py-5">
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/check_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Outdoor dining</p>
+                  </div>
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/close_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Delivery</p>
+                  </div>
+                  <div class="flex items-center px-2">
+                    <img
+                      class="icon-16px"
+                      src="/img/check_black_18dp.svg"
+                      alt=""
+                    />
+                    <p class="text-xs text-gray-700">Takeout</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--EN SOLUN SAĞI-->
+        </div>
+
+        <div id="right-content" class="hidden lg:col-span-1 lg:block">
+          <div class="map object-cover overflow-auto h-full">
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe
+                  style="width: 100%; height: 100%"
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=the%20istanbul&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe
+                ><a href="https://putlocker-is.org"></a><br /><style>
+                  .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 100%;
+                    width: 600px;
+                  }</style
+                ><a href="https://www.embedgooglemap.net">map iframe</a
+                ><style>
+                  .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 100%;
+                    width: 600px;
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--EN SAĞ-->
+      </div>
+    </div>
+    <div
+      id="footer"
+      class="sm:h-28 bg-gray-200 h-full h-10 flex justify-center items-center"
+    >
+      <div id="footer-content" class="hidden sm:block">
+        <p class="text-xs flex items-center justify-center">
+          Copyright © 2004–2021 Yelp Inc.
+          <img class="w-[45px]" src="/img/yelp-logo.svg" alt="" />, Yelp logo,
+          Yelp burst and related marks are registered trademarks of
+          <img class="w-[45px]" src="/img/yelp-logo.svg" alt="" />.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    function sidebar() {
+      document.querySelector(".sidebar").classList.toggle("active");
+
+      console.log("maraba");
+    }
+    // function hover() {
+    //   document.querySelector(".nav-card-content").classList.toggle("active");
+    // }
+  </script>
+</html>

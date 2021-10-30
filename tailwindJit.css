@@ -1,0 +1,51 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .sidebar {
+    @apply col-span-1
+    mr-10
+    mt-10
+    sm:relative
+    absolute
+    bg-white
+    sm:bg-auto
+    sm:block
+    hidden;
+  }
+  .nav-card-content.active {
+    @apply block;
+  }
+  .sidebar.active {
+    @apply block w-full h-full;
+  }
+  .img-72px {
+    @apply w-72px h-72px;
+    @apply object-cover;
+  }
+  .img-220px {
+    @apply w-220px h-220px;
+    @apply object-cover;
+  }
+  .icon-16px {
+    @apply w-16px h-16px;
+  }
+  .icon-24px {
+    @apply w-24px h-24px;
+  }
+  .icon-20px {
+    @apply w-20px h-20px;
+  }
+  .icon-15px {
+    @apply w-15px h-15px;
+  }
+  .card-content-img {
+    @apply w-152px h-153px;
+    @apply object-cover;
+  }
+
+  ::placeholder {
+    @apply text-xs;
+  }
+}

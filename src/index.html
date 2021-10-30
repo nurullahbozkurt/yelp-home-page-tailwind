@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/tailwind.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="h-full">
+    <div id="header" class="bg-headerBackgroundImage bg-cover h-[570px] pt-9">
+      <div class="container flex flex-col items-center max-w-[960px] m-auto">
+        <div id="menu" class="w-full flex justify-between">
+          <div id="menu-link" class="pl-2">
+            <nav class="flex text-white cursor-text">
+              <a class="px-3 font-semibold text-sm" href="/">Write a Rewiev</a>
+              <a class="px-3 font-semibold text-sm" href="/">Events</a>
+              <a class="px-3 font-semibold text-sm" href="/">Talk</a>
+            </nav>
+          </div>
+          <div id="icons" class="flex">
+            <a href="/" class="icon-24px mx-1">
+              <img src="/img/comment-icon.png" alt="" />
+            </a>
+            <a href="/" class="icon-24px mx-1">
+              <img src="/img/natification-icon.png" alt="" />
+            </a>
+            <div class="group relative">
+              <button href="/" class="flex border bg-gray-300 rounded">
+                <img src="/img/icons-user.png" class="icon-24px mx-1" alt="" />
+                <img src="/img/dropdown.svg" alt="" />
+              </button>
+              <div
+                class="
+                  hidden
+                  group-focus-within:block
+                  flex flex-col
+                  absolute
+                  bg-gray-200
+                  w-[9rem]
+                  rounded
+                  px-2
+                  py-2
+                  text-sm
+                  font-semibold
+                "
+              >
+                <div><a href="/">About Me</a></div>
+                <div class="py-1"><a href="/">Find Friends</a></div>
+                <div><a href="/">Account Settings</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="logo" class="items-center justify-center pt-[80px]">
+          <img class="w-[160px] h-[80px]" src="/img/yelp-logo.svg" alt="" />
+        </div>
+        <div id="search" class="w-full pt-11">
+          <div id="find-input" class="md:flex md:w-full grid-cols-10">
+            <div
+              id="input-top"
+              class="md:flex md:w-full flex col-span-5 mt-8 mx-2 md:mx-0"
+            >
+              <span class="bg-white px-3 py-3 font-bold text-gray-600 rounded-l"
+                >Find</span
+              >
+              <input
+                type="text"
+                placeholder="nail salons,plumbers,takeout..."
+                class="w-full px-3 py-3 outline-none rounded-r md:rounded-none"
+              />
+            </div>
+            <div
+              id="input-bottom"
+              class="md:flex md:w-full flex col-span-5 mt-8 mx-2 md:mx-0"
+            >
+              <span
+                class="
+                  bg-white
+                  px-3
+                  py-3
+                  font-bold
+                  text-gray-600
+                  rounded-l
+                  md:rounded-none
+                "
+                >Near</span
+              >
+              <input
+                type="text"
+                placeholder="Istanbul,Turkey"
+                class="w-full px-3 py-3 outline-none"
+              />
+              <button class="bg-red-600 w-1/6 flex items-center justify-center">
+                <img src="/img/search_white_36dp.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          id="links"
+          class="
+            flex
+            md:grid
+            grid-cols-10
+            justify-around
+            w-full
+            md:w-3/4
+            mt-3
+            hidden
+            md:block
+          "
+        >
+          <a
+            class="
+              text-white
+              font-semibold
+              flex
+              justify-center
+              items-center
+              md:col-span-2
+              space-x-1
+            "
+            href="/"
+          >
+            <img src="/img/handyman_white_24dp.svg" alt="" />
+            <span>Plumbers</span>
+          </a>
+          <a
+            class="
+              text-white
+              font-semibold
+              flex
+              justify-center
+              items-center
+              md:col-span-2
+              space-x-1
+            "
+            href="/"
+          >
+            <img src="/img/restaurant_white_24dp.svg" alt="" />
+            <span> Restaurants</span>
+          </a>
+          <a
+            class="
+              min-w-[139px]
+              text-white
+              font-semibold
+              flex
+              justify-center
+              items-center
+              md:col-span-2
+              space-x-1
+            "
+            href="/"
+          >
+            <img src="/img/home_repair_service_white_24dp.svg" alt="" />
+            <span>Home Services</span>
+          </a>
+          <a
+            class="
+              text-white
+              font-semibold
+              flex
+              justify-center
+              items-center
+              md:col-span-2
+            "
+            href="/"
+          >
+            <img src="/img/delivery_dining_white_24dp.svg" alt="" />
+            <span>Delivery</span>
+          </a>
+          <a
+            class="
+              text-white
+              font-semibold
+              flex
+              justify-center
+              items-center
+              md:col-span-2
+              space-x-1
+            "
+            href="/"
+          >
+            <img src="/img/other_houses_white_24dp.svg" alt="" />
+            <span>Black Owner</span>
+          </a>
+        </div>
+        <div id="header-info"></div>
+      </div>
+    </div>
+    <div id="main" class="w-full max-w-[960px] m-auto">
+      <div class="mt-6">
+        <h4 class="flex justify-center font-bold text-xl text-red-600">
+          Your Next Review Awaits
+        </h4>
+      </div>
+      <div
+        id="card-group"
+        class="h-full m-auto grid grid-cols-1 md:grid-cols-2"
+      >
+        <div class="flex border rounded mx-2 mt-4" style="height: fit-content">
+          <img class="card-content-img" src="/img/yere-batan.jpeg" alt="" />
+          <div class="card-content p-5 flex flex-col justify-between">
+            <div>
+              <a href="/" class="font-bold text-blue-600 hover:underline">
+                Topkapı Sarayı Müzesi
+              </a>
+              <p class="text-sm mt-1 text-gray-600">
+                Lorem ipsum dolor sit amet consectetur?
+              </p>
+            </div>
+            <div class="star flex space-x-1">
+              <button class="hover:bg-red-600 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-red-400 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-yellow-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-300 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex border rounded mx-2 mt-4" style="height: fit-content">
+          <img class="card-content-img" src="/img/yemek.jpeg" alt="" />
+          <div class="card-content p-5 flex flex-col justify-between">
+            <div>
+              <a href="/" class="font-bold text-blue-600 hover:underline">
+                Topkapı Sarayı Müzesi
+              </a>
+              <p class="text-sm mt-1 text-gray-600">
+                Lorem ipsum dolor sit amet consectetur?
+              </p>
+            </div>
+            <div class="star flex space-x-1">
+              <button class="hover:bg-red-600 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-red-400 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-yellow-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-300 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex border rounded mx-2 mt-4" style="height: fit-content">
+          <img class="card-content-img" src="/img/yemek.jpeg" alt="" />
+          <div class="card-content p-5 flex flex-col justify-between">
+            <div>
+              <a href="/" class="font-bold text-blue-600 hover:underline">
+                Topkapı Sarayı Müzesi
+              </a>
+              <p class="text-sm mt-1 text-gray-600">
+                Lorem ipsum dolor sit amet consectetur?
+              </p>
+            </div>
+            <div class="star flex space-x-1">
+              <button class="hover:bg-red-600 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-red-400 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-yellow-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-300 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card flex border rounded mx-2 mt-4"
+          style="height: fit-content"
+        >
+          <img class="card-content-img" src="/img/restaurant.jpeg" alt="" />
+          <div class="card-content p-5 flex flex-col justify-between">
+            <div>
+              <a href="/" class="font-bold text-blue-600 hover:underline">
+                Topkapı Sarayı Müzesi
+              </a>
+              <p class="text-sm mt-1 text-gray-600">
+                Lorem ipsum dolor sit amet consectetur?
+              </p>
+            </div>
+            <div class="star flex space-x-1">
+              <button class="hover:bg-red-600 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-red-400 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-yellow-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-300 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex border rounded mx-2 mt-4" style="height: fit-content">
+          <img class="card-content-img" src="/img/doner.jpeg" alt="" />
+          <div class="card-content p-5 flex flex-col justify-between">
+            <div>
+              <a href="/" class="font-bold text-blue-600 hover:underline">
+                Topkapı Sarayı Müzesi
+              </a>
+              <p class="text-sm mt-1 text-gray-600">
+                Lorem ipsum dolor sit amet consectetur?
+              </p>
+            </div>
+            <div class="star flex space-x-1">
+              <button class="hover:bg-red-600 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-red-400 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-yellow-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-300 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex border rounded mx-2 mt-4" style="height: fit-content">
+          <img class="card-content-img" src="/img/galata-kulesi.jpeg" alt="" />
+          <div class="card-content p-5 flex flex-col justify-between">
+            <div>
+              <a href="/" class="font-bold text-blue-600 hover:underline">
+                Topkapı Sarayı Müzesi
+              </a>
+              <p class="text-sm mt-1 text-gray-600">
+                Lorem ipsum dolor sit amet consectetur?
+              </p>
+            </div>
+            <div class="star flex space-x-1">
+              <button class="hover:bg-red-600 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-red-400 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-yellow-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-300 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+              <button class="hover:bg-green-500 bg-gray-300 rounded p-1">
+                <img src="/img/son-starr.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="show-more" class="flex justify-center m-auto mt-4">
+        <a
+          class="text-sm hover:underline text-blue-500 hover:text-blue-700"
+          href="/"
+          >Show more suggestions..</a
+        >
+      </div>
+    </div>
+    <!-- --- -->
+
+    <div id="content" class="max-w-[960px] m-auto">
+      <h2
+        class="text-red-600 font-bold text-2xl m-auto flex justify-center my-9"
+      >
+        Yelp İstanbul
+      </h2>
+      <div
+        class="flex grid-cols-10 justify-between border-b w-100 overflow-scroll"
+      >
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">Istanbul</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">San Francisco</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">Austin</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">Dallas</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">Houston</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">San Antonio</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">New York</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">San Jose</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">Los Angeles</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+        <div
+          class="
+            flex
+            justify-center
+            col-span-1
+            text-sm text-gray-600
+            leading-8
+            min-w-[95px]
+            relative
+            group
+          "
+        >
+          <a href="/">Chicago</a>
+          <div
+            class="
+              hidden
+              group-hover:block
+              absolute
+              left-0
+              bottom-0
+              w-full
+              h-1
+              border-b-4 border-red-600
+            "
+          ></div>
+        </div>
+      </div>
+
+      <div class="container m-auto mt-10 mb-10">
+        <div class="m-auto">
+          <h3 class="text-red-600 font-bold text-xl m-auto flex justify-center">
+            Recent Collections
+          </h3>
+        </div>
+        <div
+          id="card-sm-group"
+          class="w-full grid grid-cols-1 md:grid-cols-2 border rounded mt-5"
+        >
+          <div id="card-sm" class="flex p-3 border-b">
+            <img
+              class="img-72px rounded"
+              src="/img/galata-kulesi.jpeg"
+              alt=""
+            />
+            <div class="pl-2 flex flex-col justify-between">
+              <a class="font-bold text-blue-600 text-sm" href="/">ISTANBUL</a>
+              <p class="text-xs">
+                11 Places By
+                <span class="text-sm text-blue-500">Nurullah B.</span>
+              </p>
+            </div>
+          </div>
+          <div id="card-sm" class="flex p-3 border-b">
+            <img class="img-72px rounded" src="/img/restaurant.jpeg" alt="" />
+            <div class="pl-2 flex flex-col justify-between">
+              <a class="font-bold text-blue-600 text-sm" href="/">BURSA</a>
+              <p class="text-xs">
+                11 Places By
+                <span class="text-sm text-blue-500">Nurullah B.</span>
+              </p>
+            </div>
+          </div>
+          <div id="card-sm" class="flex p-3 border-b">
+            <img class="img-72px rounded" src="/img/yemek.jpeg" alt="" />
+            <div class="pl-2 flex flex-col justify-between">
+              <a class="font-bold text-blue-600 text-sm" href="/">ANKARA</a>
+              <p class="text-xs">
+                11 Places By
+                <span class="text-sm text-blue-500">Nurullah B.</span>
+              </p>
+            </div>
+          </div>
+          <div id="card-sm" class="flex p-3 border-b">
+            <img class="img-72px rounded" src="/img/doner.jpeg" alt="" />
+            <div class="pl-2 flex flex-col justify-between">
+              <a class="font-bold text-blue-600 text-sm" href="/">Izmir</a>
+              <p class="text-xs">
+                11 Places By
+                <span class="text-sm text-blue-500">Nurullah B.</span>
+              </p>
+            </div>
+          </div>
+          <div id="card-sm" class="flex p-3 border-b">
+            <img
+              class="img-72px rounded"
+              src="/img/galata-kulesi.jpeg"
+              alt=""
+            />
+            <div class="pl-2 flex flex-col justify-between">
+              <a class="font-bold text-blue-600 text-sm" href="/">ISTANBUL</a>
+              <p class="text-xs">
+                11 Places By
+                <span class="text-sm text-blue-500">Nurullah B.</span>
+              </p>
+            </div>
+          </div>
+          <div id="card-sm" class="flex p-3 border-b">
+            <img class="img-72px rounded" src="/img/restaurant.jpeg" alt="" />
+            <div class="pl-2 flex flex-col justify-between">
+              <a class="font-bold text-blue-600 text-sm" href="/">BURSA</a>
+              <p class="text-xs">
+                11 Places By
+                <span class="text-sm text-blue-500">Nurullah B.</span>
+              </p>
+            </div>
+          </div>
+          <div id="card-sm" class="flex p-3">
+            <img class="img-72px rounded" src="/img/yemek.jpeg" alt="" />
+            <div class="pl-2 flex flex-col justify-between">
+              <a class="font-bold text-blue-600 text-sm" href="/">ANKARA</a>
+              <p class="text-xs">
+                11 Places By
+                <span class="text-sm text-blue-500">Nurullah B.</span>
+              </p>
+            </div>
+          </div>
+          <div id="card-sm" class="flex p-3">
+            <img class="img-72px rounded" src="/img/doner.jpeg" alt="" />
+            <div class="pl-2 flex flex-col justify-between">
+              <a class="font-bold text-blue-600 text-sm" href="/">Izmir</a>
+              <p class="text-xs">
+                11 Places By
+                <span class="text-sm text-blue-500">Nurullah B.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="footer"
+      class="
+        sm:h-28
+        bg-gray-100
+        text-gray-700
+        h-full h-10
+        flex
+        justify-center
+        items-center
+      "
+    >
+      <div id="footer-content" class="hidden sm:block">
+        <p class="text-xs flex items-center justify-center">
+          Copyright © 2004–2021 Yelp Inc.
+          <img class="w-[45px]" src="/img/yelp-logo.svg" alt="" />, Yelp logo,
+          Yelp burst and related marks are registered trademarks of
+          <img class="w-[45px]" src="/img/yelp-logo.svg" alt="" />.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
